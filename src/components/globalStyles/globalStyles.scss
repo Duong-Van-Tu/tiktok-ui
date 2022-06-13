@@ -2,7 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600&display=swap');
 
 :root {
-    --primary: #fe2c55;
+    --primary-color: #fe2c55;
+    --text-color: #333;
+
+    --default-layout-width: 1150px;
+    --default-layout-header-height: 60px;
+    --font-family: 'Mukta', sans-serif;
 }
 
 * {
@@ -14,8 +19,24 @@ html {
 }
 
 body {
-    font-family: 'Mukta', sans-serif;
+    font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+    overflow-y: overlay;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
 }
